@@ -1,5 +1,12 @@
 <?php
  return array(
+    'vayu-blocks' => array(
+        'name' => esc_html__('Vayu Blocks', 'wp-popup-builder'),
+        'img' => 'icon-128x128.png',
+        'admin_link' =>   'vayu-blocks',
+        'details' => esc_url('https://themehunk.com/vayu-blocks/'),
+        'active_filename' => 'vayu-blocks/vayu-blocks.php',
+    ),
     'th-advance-product-search' => array(
         'name' => esc_html__('TH Advance Product Search', 'wp-popup-builder'),
         'img' => 'icon-128x128.gif',
@@ -15,7 +22,7 @@
 
     'th-all-in-one-woo-cart' => array(
         'name' => esc_html__('Th All In One Woo Cart', 'wp-popup-builder'),
-        'img' => 'icon-128x128.png',
+        'img' => 'icon-128x128.gif',
         'details' => 'https://themehunk.com/th-all-in-one-woo-cart/',
         'admin_link' =>   'taiowc',
         'active_filename' => 'th-all-in-one-woo-cart/th-all-in-one-woo-cart.php',
@@ -28,7 +35,7 @@
 
     'th-product-compare' => array(
         'name' => esc_html__('Th Product Compare', 'wp-popup-builder'),
-        'img' => 'icon-128x128.png',
+        'img' => 'icon-128x128.gif',
         'details' => 'https://themehunk.com/th-product-compare-plugin/',
         'active_filename' => 'th-product-compare/th-product-compare.php',
         'admin_link' =>   'th-product-compare',
@@ -82,14 +89,6 @@
         'admin_link' =>   'unlimited-blocks',
         'details' => esc_url('https://themehunk.com/docs/unlimited-blocks-for-gutenberg/'),
         'active_filename' => 'unlimited-blocks/unlimited-blocks.php',
-    ),
-
-    'themehunk-megamenu-plus' => array(
-        'name' => esc_html__('ThemeHunk Megamenu – Menu builder', 'wp-popup-builder'),
-        'img' => 'icon-128x128.png',
-        'admin_link' =>   'themehunkmegamenu',
-        'details' => 'https://themehunk.com/product/themehunk-megamenu/',
-        'active_filename' => 'themehunk-megamenu-plus/themehunk-megamenu.php',
     )
 
 

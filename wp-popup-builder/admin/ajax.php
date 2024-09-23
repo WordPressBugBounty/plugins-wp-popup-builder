@@ -89,6 +89,12 @@ class wppb_ajax extends wppb_db
 	// install lead form 
 	public function lead_form_plugin_activate()
 	{
+			if ( ! current_user_can( 'administrator' ) ) {
+
+		            wp_die( - 1, 403 );
+		            
+		}
+		check_ajax_referer( '_wppb_nonce','activatelf_nonce');
 		$plugin_init = '/lead-form-builder/lead-form-builder.php';
 		$activate    = activate_plugin($plugin_init, '', false, true);
 		if (is_wp_error($activate)) {
@@ -111,6 +117,7 @@ class wppb_ajax extends wppb_db
 
 	public function getLeadForm()
 	{
+		check_ajax_referer( '_wppb_nonce','getlead_nonce');
 		$result = $this->get_lead_form_ajx();
 		echo do_shortcode( '[lead-form form-id='.intval($result).']' ); 
 		die();
@@ -118,13 +125,15 @@ class wppb_ajax extends wppb_db
 	//shortcode 
 	public function shortcode_Api_Add()
 	{
+		check_ajax_referer( '_wppb_nonce','nonce');
 		$dataPost = $_POST;
 		if (isset($dataPost['shortcode'])) {
 			$shortcode_ = sanitize_text_field($dataPost['shortcode']);
 			$result = do_shortcode($shortcode_);
 			echo wp_kses_post($result);
 		}
-		die();
+
+		wp_die();
 	}
 }
 wppb_ajax::get();

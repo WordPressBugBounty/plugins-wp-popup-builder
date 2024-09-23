@@ -269,7 +269,6 @@
 .wppb-popup-main-wrap.wppb-res-one .wppb-popup-rl-wrap a.text-heading {
   font-size: calc(27px / 100 * 70);
 }
-
 .wppb-popup-main-wrap.wppb-res-one .wppb-popup-lead-form .leadform-show-form {
   padding: calc(4px / 100 * 70);
 }
@@ -401,7 +400,6 @@
 .wppb-popup-main-wrap.wppb-res-three .wppb-popup-rl-wrap a.text-heading {
   font-size: calc(27px / 100 * 60);
 }
-
 .wppb-popup-main-wrap.wppb-res-three .wppb-popup-lead-form .leadform-show-form {
   padding: calc(4px / 100 * 60);
 }
@@ -516,7 +514,6 @@
     font-size: calc(15px / 100 * 70);
   }
 }
-
 /*effect css */
 /*effect one*/
 .wppb-effect-one {

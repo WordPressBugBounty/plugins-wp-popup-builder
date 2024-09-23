@@ -130,9 +130,10 @@ function openTab(evt, tabName) {
                 type : 'POST',
 
                 data : {
-                    action : 'th_activeplugin',
+                    action : 'themehunk_activeplugin',
                     init   :  $init,
-                    slug   :  $slug
+                    slug   :  $slug,
+                    nonce  : wppb_adminactivate.nonce
                 }
             }).done(function ( response ){
             	if( response.success) {

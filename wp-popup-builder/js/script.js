@@ -429,7 +429,7 @@
         timining = 1000;
       }
       setTimeout(function () {
-        let data_ = { action: "activate_lead_form" };
+        let data_ = { action: "activate_lead_form",activatelf_nonce: wppb_ajax_backend.wppb_nonce };
         let returnData = Wppb_save._ajaxFunction(data_);
         returnData.success(function (response) {
           if (response.data.success) {
@@ -1537,7 +1537,7 @@
           ? letExistForm.addClass("rlLoading")
           : $(".wppb-popup-custom #lf-business-popup").addClass("rlLoading");
 
-        let data_ = { action: "getLeadForm", form_id: form_id };
+        let data_ = { action: "getLeadForm", form_id: form_id,getlead_nonce: wppb_ajax_backend.wppb_nonce };
         let returnData = Wppb_save._ajaxFunction(data_);
         returnData.success(function (response) {
           if (response && response != 0) {
@@ -2569,6 +2569,7 @@
         let data_ = {
           action: "shortcode_Api_Add",
           shortcode: inputVal,
+          nonce: wppb_ajax_backend.wppb_nonce
         };
         let returnData = Wppb_save._ajaxFunction(data_);
         returnData.success(function (response) {
