@@ -27,7 +27,7 @@ class wppb_ajax extends wppb_db
 
 	public function insert()
 	{
-		if ( ! current_user_can( 'administrator' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 
 		            wp_die( - 1, 403 );
 		            
@@ -41,7 +41,7 @@ class wppb_ajax extends wppb_db
 
 	public function update()
 	{
-		if ( ! current_user_can( 'administrator' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 
 		            wp_die( - 1, 403 );
 		            
@@ -59,7 +59,7 @@ class wppb_ajax extends wppb_db
 
 	public function delete()
 	{
-		if ( ! current_user_can( 'administrator' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 
 		            wp_die( - 1, 403 );
 		            
@@ -72,7 +72,7 @@ class wppb_ajax extends wppb_db
 	}
 	public function option_update()
 	{
-		if ( ! current_user_can( 'administrator' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 
 		            wp_die( - 1, 403 );
 		            
@@ -89,7 +89,7 @@ class wppb_ajax extends wppb_db
 	// install lead form 
 	public function lead_form_plugin_activate()
 	{
-			if ( ! current_user_can( 'administrator' ) ) {
+			if ( ! current_user_can( 'manage_options' ) ) {
 
 		            wp_die( - 1, 403 );
 		            
@@ -126,6 +126,12 @@ class wppb_ajax extends wppb_db
 	public function shortcode_Api_Add()
 	{
 		check_ajax_referer( '_wppb_nonce','nonce');
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+
+			wp_die( __( 'You do not have sufficient permissions to access.','wppb' ) );
+		}
+		
 		$dataPost = $_POST;
 		if (isset($dataPost['shortcode'])) {
 			$shortcode_ = sanitize_text_field($dataPost['shortcode']);

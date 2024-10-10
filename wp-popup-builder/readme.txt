@@ -4,7 +4,7 @@ Author URI: : https://www.themehunk.com/
 Tags: popup,wp popup, popup maker, popup builder, popups,marketing
 Requires at least: 5.5
 Tested up to: 6.6
-Stable tag: 1.3.5
+Stable tag: 1.3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -129,6 +129,9 @@ Just upload the `wp-popup-builder.zip` to the `/wp-content/plugins/` directory, 
 
 
 == Changelog ==
+
+= 1.3.6 =
+* Fix : In ajax manage_option permission added.
 
 = 1.3.5 =
 * Fix : Wordfence security issue resolved.
@@ -282,8 +285,8 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.3.3 =
-* issue resolved.
+= 1.3.6 =
+* Fix : In ajax manage_option permission added.
 
 = 1.0.0 =
 Initial release
