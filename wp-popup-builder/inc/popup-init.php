@@ -383,7 +383,7 @@ class wp_popup_builder_init {
 	public function show_popup_part_start($value, $shortcode = false) {
 		$return_data = false;
 		$cookieFilter = true;
-		$option = unserialize($value->boption);
+		$option = unserialize($value->boption, ['allowed_classes' => false]);
 		if (isset($_COOKIE['wppb-fr-' . $value->BID]) && isset($option['frequency']) && $_COOKIE['wppb-fr-' . $value->BID] == $option['frequency']) {
 			$cookieFilter = false;
 		}
@@ -575,7 +575,7 @@ class wp_popup_builder_init {
 
 			<div class="rl_i_editor-item-content-items content-border">
 				<div>
-					<label class="rl-sub-title"><?php _e('Border Width(<small>px</small>)', 'wppb'); ?></label>
+					<label class="rl-sub-title"><?php esc_html_e('Border Width(<small>px</small>)', 'wppb'); ?></label>
 					<div>
 						<?php
 						$input = '<input class="rl-sub-title" type="number" value=""  ' . $data_attr . ' data-border="width">';
@@ -587,7 +587,7 @@ class wp_popup_builder_init {
 				</div>
 				<div>
 
-					<label class="rl-sub-title"><?php _e('Border radius(<small>px</small>)', 'wppb'); ?>
+					<label class="rl-sub-title"><?php esc_html_e('Border radius(<small>px</small>)', 'wppb'); ?>
 					</label>
 
 					<div>
@@ -600,7 +600,7 @@ class wp_popup_builder_init {
 				</div>
 
 				<div>
-					<label class="rl-sub-title"><?php _e('Border Color', 'wppb'); ?>
+					<label class="rl-sub-title"><?php esc_html_e('Border Color', 'wppb'); ?>
 					</label>
 					<div>
 
@@ -613,7 +613,7 @@ class wp_popup_builder_init {
 
 				<div>
 					<label class="rl-sub-title">
-						<?php _e('Border Style', 'wppb'); ?>
+						<?php esc_html_e('Border Style', 'wppb'); ?>
 					</label>
 					<?php $this->select($data_attr . ' data-border="border-style"', [['solid', 'solid'], ['dashed', 'dashed'], ['dotted', 'dotted'], ['double', 'double'], ['groove', 'groove'], ['ridge', 'ridge']]);
 					?>
@@ -631,29 +631,29 @@ class wp_popup_builder_init {
 			<div class="rl_i_editor-item-content-items content-border content-box-shadow">
 				<div>
 					<label class="rl-sub-title">
-						<?php _e('X Offset', 'wppb'); ?>
+						<?php esc_html_e('X Offset', 'wppb'); ?>
 					</label>
 					<div>
 						<input class="rl-sub-title" type="number" value="" <?php echo  esc_attr($type) . '="' . esc_attr($id) . '"'; ?> data-shadow="x-offset">
 					</div>
 				</div>
 				<div>
-					<label class="rl-sub-title"><?php _e('Y Offset', 'wppb'); ?></label>
+					<label class="rl-sub-title"><?php esc_html_e('Y Offset', 'wppb'); ?></label>
 					<div><input class="rl-sub-title" type="number" value="" <?php echo  esc_attr($type) . '="' . esc_attr($id) . '"'; ?> data-shadow="y-offset"></div>
 				</div>
 				<div>
-					<label class="rl-sub-title"><?php _e('Blur', 'wppb'); ?></label>
+					<label class="rl-sub-title"><?php esc_html_e('Blur', 'wppb'); ?></label>
 					<div><input class="rl-sub-title" type="number" value="" <?php echo  esc_attr($type) . '="' . esc_attr($id) . '"'; ?> data-shadow="blur"></div>
 				</div>
 				<div>
-					<label class="rl-sub-title"><?php _e('Spread', 'wppb'); ?>
+					<label class="rl-sub-title"><?php esc_html_e('Spread', 'wppb'); ?>
 					</label>
 					<div>
 						<input class="rl-sub-title" type="number" value="" <?php echo  esc_attr($type) . '="' . esc_attr($id) . '"'; ?> data-shadow="spread">
 					</div>
 				</div>
 				<div>
-					<label class="rl-sub-title"><?php _e('Color', 'wppb'); ?>
+					<label class="rl-sub-title"><?php esc_html_e('Color', 'wppb'); ?>
 					</label>
 					<div>
 						<label class="color-output" <?php echo  esc_attr($type) . '="' . esc_attr($id) . '"'; ?> data-shadow="color"></label>
@@ -700,10 +700,10 @@ class wp_popup_builder_init {
 
 				</ul>
 				<ul class="ul-inputs-text rl-clear">
-					<li><?php _e('TOP', 'wppb'); ?></li>
-					<li><?php _e('RIGHT', 'wppb'); ?></li>
-					<li><?php _e('BOTTOM', 'wppb'); ?></li>
-					<li><?php _e('LEFT', 'wppb'); ?></li>
+					<li><?php esc_html_e('TOP', 'wppb'); ?></li>
+					<li><?php esc_html_e('RIGHT', 'wppb'); ?></li>
+					<li><?php esc_html_e('BOTTOM', 'wppb'); ?></li>
+					<li><?php esc_html_e('LEFT', 'wppb'); ?></li>
 					<li></li>
 				</ul>
 			</div>

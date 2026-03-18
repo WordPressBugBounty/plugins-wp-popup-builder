@@ -1,14 +1,14 @@
 <?php
  return array(
     'vayu-blocks' => array(
-        'name' => esc_html__('Vayu Blocks', 'wp-popup-builder'),
+        'name' => esc_html__('Vayu Blocks', 'wppb'),
         'img' => 'icon-128x128.png',
         'admin_link' =>   'vayu-blocks',
         'details' => esc_url('https://themehunk.com/vayu-blocks/'),
         'active_filename' => 'vayu-blocks/vayu-blocks.php',
     ),
     'th-advance-product-search' => array(
-        'name' => esc_html__('TH Advance Product Search', 'wp-popup-builder'),
+        'name' => esc_html__('TH Advance Product Search', 'wppb'),
         'img' => 'icon-128x128.gif',
         'admin_link' =>   'th-advance-product-search',
         'details' => 'https://themehunk.com/th-product-compare-plugin/',
@@ -21,7 +21,7 @@
     ),
 
     'th-all-in-one-woo-cart' => array(
-        'name' => esc_html__('Th All In One Woo Cart', 'wp-popup-builder'),
+        'name' => esc_html__('Th All In One Woo Cart', 'wppb'),
         'img' => 'icon-128x128.gif',
         'details' => 'https://themehunk.com/th-all-in-one-woo-cart/',
         'admin_link' =>   'taiowc',
@@ -34,7 +34,7 @@
     ),
 
     'th-product-compare' => array(
-        'name' => esc_html__('Th Product Compare', 'wp-popup-builder'),
+        'name' => esc_html__('Th Product Compare', 'wppb'),
         'img' => 'icon-128x128.gif',
         'details' => 'https://themehunk.com/th-product-compare-plugin/',
         'active_filename' => 'th-product-compare/th-product-compare.php',
@@ -47,7 +47,7 @@
     ),
 
     'th-variation-swatches' => array(
-        'name' => esc_html__('TH Variation Swatches', 'wp-popup-builder'),
+        'name' => esc_html__('TH Variation Swatches', 'wppb'),
         'img' => 'icon-128x128.gif',
         'details' => 'https://themehunk.com/th-variation-swatches/',
         'active_filename' => 'th-variation-swatches/th-variation-swatches.php',
@@ -59,7 +59,7 @@
         )
     ),
     'lead-form-builder' => array(
-        'name' => esc_html__('Lead Form Builder', 'wp-popup-builder'),
+        'name' => esc_html__('Lead Form Builder', 'wppb'),
         'img' => 'icon-128x128.png',
         'details' => 'https://themehunk.com/product/lead-form-builder-pro/',
         'active_filename' => 'lead-form-builder/lead-form-builder.php',
@@ -70,8 +70,8 @@
             'docs' => esc_url('https://themehunk.com/docs/lead-form-builder-pro/'),
         )
     ),
-    'wp-popup-builder' => array(
-        'name' => esc_html__('WP Popup Builder – Popup Forms & Newsletter', 'wp-popup-builder'),
+    'wppb' => array(
+        'name' => esc_html__('WP Popup Builder – Popup Forms & Newsletter', 'wppb'),
         'img' => 'icon-128x128.png',
         'details' => 'https://themehunk.com/wp-popup-builder-pro/',
         'active_filename' => 'wp-popup-builder/wp-popup-builder.php',
@@ -84,7 +84,7 @@
     ),
 
     'unlimited-blocks' => array(
-        'name' => esc_html__('Unlimited Blocks For Gutenberg', 'lead-form-builder'),
+        'name' => esc_html__('Unlimited Blocks For Gutenberg', 'wppb'),
         'img' => 'icon-128x128.png',
         'admin_link' =>   'unlimited-blocks',
         'details' => esc_url('https://themehunk.com/docs/unlimited-blocks-for-gutenberg/'),

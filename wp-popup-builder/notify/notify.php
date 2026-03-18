@@ -12,10 +12,11 @@ class ThemeHunk_Notify{
 
     function __construct(){
 
-		if(isset($_GET['notice-disable']) && sanitize_text_field($_GET['notice-disable']) == true){
-
-		add_action('admin_init', array($this,'set_cookie'));
-
+		if ( isset( $_GET['notice-disable'] ) && $_GET['notice-disable'] === '1'
+			&& isset( $_GET['_wppb_notice_nonce'] )
+			&& wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['_wppb_notice_nonce'] ) ), 'wppb_notice_dismiss' )
+		) {
+			add_action( 'admin_init', array( $this, 'set_cookie' ) );
 		}
 
 
@@ -50,7 +51,7 @@ class ThemeHunk_Notify{
 		if(!isset($_COOKIE['thc_time'])) {
  
 			// set a cookie for 1 year
-		setcookie('thc_time', $cok_time, time()+(86457*30));
+		setcookie('thc_time', (string) $cok_time, time()+(86457*30));
 			 
 		}
  
@@ -62,7 +63,7 @@ class ThemeHunk_Notify{
   			$cookie_time = sanitize_text_field($_COOKIE['thc_time']);
 
 			if ($cookie_time < $visit_time) {
-				setcookie('thc_time', null, strtotime('-1 day'));
+				setcookie('thc_time', '', time() - 86400);
 			}
 	}
 

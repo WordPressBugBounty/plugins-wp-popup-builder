@@ -132,12 +132,12 @@ function plugin_install_button($plugin){
   $admin_link=$plugin['admin_link'];
   $pro_active=$plugin['plugin_active'];
 
-  $deatil_link = '<a class="plugin-detail" target="_blank" href="'.esc_url( $plugin['detail_pro'] ).'">'.esc_html__( 'View details', 'wp-popup-builder' ).'</a>
+  $deatil_link = '<a class="plugin-detail" target="_blank" href="'.esc_url( $plugin['detail_pro'] ).'">'.esc_html__( 'View details', 'wppb' ).'</a>
    <span class="setting-link'.esc_attr($pro_active).' setting-'.esc_attr($slug).'">|</span><a class="setting-link'.esc_attr($pro_active).' setting-'.esc_attr($slug).'" href="'.admin_url('admin.php?page='.esc_attr($admin_link)).'">'.__('Settings','wppb').'</a>';
 
   if($plugin['free_pro']=='Free' && $slug !='themehunk-megamenu-plus'){
   $upgrade_button ='<a class="upgrade-to-pro button" target="_blank" href="'.$plugin['detail_pro'].'">Upgrade To Pro</a>';
-  $deatil_link = '<a class="plugin-detail" target="_blank" href="'.esc_url( 'https://wordpress.org/plugins/'.esc_attr($slug )).'">'.esc_html__( 'View details', 'wp-popup-builder' ).'</a>
+  $deatil_link = '<a class="plugin-detail" target="_blank" href="'.esc_url( 'https://wordpress.org/plugins/'.esc_attr($slug )).'">'.esc_html__( 'View details', 'wppb' ).'</a>
   <span class="setting-link'.esc_attr($pro_active).' setting-'.esc_attr($slug).'">|</span><a class="setting-link'.esc_attr($pro_active).' setting-'.esc_attr($slug).'" href="'.admin_url('admin.php?page='.esc_attr($admin_link)).'">'.__('Settings','wppb').'</a>';
   }
 

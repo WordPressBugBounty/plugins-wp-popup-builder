@@ -57,6 +57,11 @@
           $("body").append(renderTohtml);
           let wppbPopupShow = $("#wppbPopupShow");
 
+          // Reset lead form state so loader/success message never show on popup open
+          wppbPopupShow.find(".successmsg").hide();
+          wppbPopupShow.find(".spinner, #loading_image").hide();
+          wppbPopupShow.find("form.lead-form-front").show();
+
           // create cookie
           let checkCookie = getPopup.attr("data-wppb-frequency");
           Business_front.setPopupCookie(getPopup);

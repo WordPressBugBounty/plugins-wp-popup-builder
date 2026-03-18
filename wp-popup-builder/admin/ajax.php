@@ -18,7 +18,6 @@ class wppb_ajax extends wppb_db
 		add_action('wp_ajax_activate_lead_form', array($this, 'lead_form_plugin_activate'));
 		// shortcode api save 
 		add_action('wp_ajax_shortcode_Api_Add', array($this, 'shortcode_Api_Add'));
-		add_action('wp_ajax_nopriv_shortcode_Api_Add', array($this, 'shortcode_Api_Add'));
 	}
 	public static function get()
 	{
@@ -117,20 +116,23 @@ class wppb_ajax extends wppb_db
 
 	public function getLeadForm()
 	{
-		check_ajax_referer( '_wppb_nonce','getlead_nonce');
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( -1, 403 );
+		}
+
+		check_ajax_referer( '_wppb_nonce', 'getlead_nonce' );
 		$result = $this->get_lead_form_ajx();
 		echo do_shortcode( '[lead-form form-id='.intval($result).']' ); 
 		die();
 	}
-	//shortcode 
+	//shortcode
 	public function shortcode_Api_Add()
 	{
-		check_ajax_referer( '_wppb_nonce','nonce');
-
 		if ( ! current_user_can( 'manage_options' ) ) {
-
-			wp_die( __( 'You do not have sufficient permissions to access.','wppb' ) );
+			wp_die( -1, 403 );
 		}
+
+		check_ajax_referer( '_wppb_nonce', 'nonce' );
 		
 		$dataPost = $_POST;
 		if (isset($dataPost['shortcode'])) {

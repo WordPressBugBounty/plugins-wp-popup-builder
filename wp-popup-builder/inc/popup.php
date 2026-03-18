@@ -24,9 +24,9 @@ if ($get_CustomPopup) {
 	$custom_popup_all = wppb_db::getCustomPopup($get_CustomPopup);
 	if (isset($custom_popup_all[0])) {
 		$customAddon = $custom_popup_all[0];
-		if (isset($customAddon->boption) && $customAddon->boption != '') $addon_option = unserialize($customAddon->boption);
+		if (isset($customAddon->boption) && $customAddon->boption != '') $addon_option = unserialize($customAddon->boption, ['allowed_classes' => false]);
 		$popup_is_active = $customAddon->is_active ? " checked='checked'" : "";
-		$allSetting = unserialize($customAddon->setting);
+		$allSetting = unserialize($customAddon->setting, ['allowed_classes' => false]);
 		$wppb_popup_id = $customAddon->BID;
 		$popupSetData['savebtn'] = '<button data-bid="' . esc_attr($wppb_popup_id) . '" class="wppb_popup_updateAddon">' . __('Update', 'wppb') . '</button>';
 		$popupSetData['deletebtn'] = '<button data-bid="' . esc_attr($wppb_popup_id) . '" class="wppb_popup_deleteAddon">' . __('Delete', 'wppb') . '</button>';
@@ -64,7 +64,7 @@ $position_name = isset($_GET['pos-name']) ? sanitize_text_field($_GET['pos-name'
 $homePage_Priview = get_home_url() . "?wppb_preview=" . esc_attr($get_CustomPopup) . "&pos-name=" . esc_attr($position_name);
 
 
-$nonce = $_REQUEST['_pnonce'];
+$nonce = isset($_REQUEST['_pnonce']) ? $_REQUEST['_pnonce'] : '';
 
 if ( ! wp_verify_nonce( $nonce, 'nonce_pop' ) ) {
 
@@ -82,11 +82,11 @@ if ( ! wp_verify_nonce( $nonce, 'nonce_pop' ) ) {
 		<div class="reserConfirm_inner">
 			<div class="resetWrapper">
 				<div class="resetHeader">
-					<span><?php _e('Popup Will Delete Permanentally.', 'wppb'); ?></span>
+					<span><?php esc_html_e('Popup Will Delete Permanentally.', 'wppb'); ?></span>
 				</div>
 				<div class="resetFooter">
-					<a class="wppbPopup popup deny" href="#"><span class="dashicons dashicons-dismiss"></span><?php _e('No', 'wppb'); ?></a>
-					<a class="wppbPopup popup confirm" href="#"><span class="dashicons dashicons-yes-alt"></span><?php _e('Yes', 'wppb'); ?></a>
+					<a class="wppbPopup popup deny" href="#"><span class="dashicons dashicons-dismiss"></span><?php esc_html_e('No', 'wppb'); ?></a>
+					<a class="wppbPopup popup confirm" href="#"><span class="dashicons dashicons-yes-alt"></span><?php esc_html_e('Yes', 'wppb'); ?></a>
 				</div>
 			</div>
 		</div>
@@ -97,18 +97,18 @@ if ( ! wp_verify_nonce( $nonce, 'nonce_pop' ) ) {
 		<div class="wppb-popup-cmn-nav-item">
 
 			<a class="wppb_icon_button" href="<?php echo esc_url(WPPB_PAGE_URL); ?>">
-				<span class="dashicons dashicons-arrow-left-alt"></span><span><?php _e('Back', 'wppb'); ?></span>
+				<span class="dashicons dashicons-arrow-left-alt"></span><span><?php esc_html_e('Back', 'wppb'); ?></span>
 			</a>
 
 			<a class="wppb_icon_button wppb-popup-tab <?php echo esc_attr($tabActiveEditor); ?>" data-tab='setting' data-tab-group="main-nav" href="#">
 				<span class="dashicons dashicons-edit"></span>
-				<span><?php _e('Edit Popup', 'wppb'); ?></span>
+				<span><?php esc_html_e('Edit Popup', 'wppb'); ?></span>
 			</a>
 
 			<?php if (isset($wppb_popup_id)) { ?>
 
 			<a class="wppb_icon_button wppb-popup-tab <?php echo esc_attr($tabActiveOption); ?>" data-tab='option' data-tab-group="main-nav" href="#">
-					<span><?php _e('Setting', 'wppb'); ?></span>
+					<span><?php esc_html_e('Setting', 'wppb'); ?></span>
 			</a>
 
 			<?php } ?>
@@ -119,7 +119,7 @@ if ( ! wp_verify_nonce( $nonce, 'nonce_pop' ) ) {
 
 			<a class="popup-preview" href="<?php echo esc_url($homePage_Priview); ?>" target="_blank">
 			<span class="dashicons dashicons-visibility"></span>
-			<span><?php _e("Preview", "wppb");?></span>
+			<span><?php esc_html_e("Preview", "wppb");?></span>
 		    </a>
 
 		<?php }

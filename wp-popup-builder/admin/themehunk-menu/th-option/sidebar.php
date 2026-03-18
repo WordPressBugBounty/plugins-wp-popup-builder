@@ -11,7 +11,7 @@
             <hr>
             <div class="section">
                 <h3><?php _e('Why Upgrade?','wppb'); ?></h3>
-                <p><?php _e('Upgrading to Premium plugins you will unlock a dozen of unique features that will take your website to the next level.','wp-popup-builder'); ?> </p>
+                <p><?php _e('Upgrading to Premium plugins you will unlock a dozen of unique features that will take your website to the next level.','wppb'); ?> </p>
                  <center><a class="button button-primary" target="_blank" href="https://themehunk.com/plugins/"><?php _e('View Premium Plugins','wppb'); ?> </a></center>
 
             </div>

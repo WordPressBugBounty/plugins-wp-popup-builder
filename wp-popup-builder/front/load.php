@@ -43,7 +43,7 @@ class wppb_load
 
 			foreach ($return_Html as $value) {
 
-				if (isset($value->boption) && isset($value->setting) && @unserialize($value->boption)) {
+				if (isset($value->boption) && isset($value->setting) && @unserialize($value->boption, ['allowed_classes' => false])) {
 
 					$popupData = $popupInitObj->show_popup_part_start($value);
 

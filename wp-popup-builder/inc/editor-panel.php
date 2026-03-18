@@ -17,47 +17,47 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 	<div class="rl_i_editor-wrap-in">
 		<div class="rl_i_editor-header">
 			<div class="rl_i_editor-header-area">
-				<span> <?php _e('Real Time Editor', 'wppb'); ?></span>
+				<span> <?php esc_html_e('Real Time Editor', 'wppb'); ?></span>
 			</div>
 		</div>
 		<div class="rl_i_editor-content">
 			<div class="rl_i_editor-content-area">
-				<button class="wppb-export-sub"><?php _e("Export Popup", 'wppb'); ?></button>
+				<button class="wppb-export-sub"><?php esc_html_e("Export Popup", 'wppb'); ?></button>
 
 				<?php $wp_builder_obj->header_title(__('Popup Name', 'wppb')); ?>
 				<input data-global-input="popup-name" type="text" name="global-popup-name">
 				<!-- content -->
 				<div data-toggle="add-itemes" class="rl_i_editor-element-Toggle outer-toggle rl-active">
-					<span><?php _e('Drag & Drop Module', 'wppb'); ?></span>
+					<span><?php esc_html_e('Drag & Drop Module', 'wppb'); ?></span>
 					<span class="bottomCarret dashicons dashicons-arrow-right"></span>
 				</div>
 				<section data-toggle-action="add-itemes" class="rl_i_editor-element-item">
 					<div class="rl_i_editor-element-add-item">
 						<ul class="rl_i_editor-element-add-item-list rl-clear">
-							<li><span data-item-drag="text"><i class="text-icon"><?php _e("T", 'wppb'); ?></i><?php _e("Text", 'wppb'); ?></span></li>
-							<li><span data-item-drag="heading"><i class="text-icon"><?php _e("H", 'wppb'); ?></i><?php _e("Heading", 'wppb'); ?></span></li>
-							<li><span data-item-drag="link"><i class="text-icon dashicons dashicons-admin-links"></i><?php _e("Button", 'wppb'); ?></span></li>
-							<li><span data-item-drag="image"><i class="text-icon dashicons dashicons-format-image"></i><?php _e("Image", 'wppb'); ?></span></li>
-							<li><span data-item-drag="lead-form"><i class="text-icon dashicons dashicons-feedback"></i><?php _e("Form", 'wppb'); ?></span></li>
-							<li><span class="wppb-drag-itemes" data-item-drag="spacer"><i class="text-icon dashicons dashicons-image-flip-vertical"></i><?php _e("Spacer", 'wppb'); ?></span>
+							<li><span data-item-drag="text"><i class="text-icon"><?php esc_html_e("T", 'wppb'); ?></i><?php esc_html_e("Text", 'wppb'); ?></span></li>
+							<li><span data-item-drag="heading"><i class="text-icon"><?php esc_html_e("H", 'wppb'); ?></i><?php esc_html_e("Heading", 'wppb'); ?></span></li>
+							<li><span data-item-drag="link"><i class="text-icon dashicons dashicons-admin-links"></i><?php esc_html_e("Button", 'wppb'); ?></span></li>
+							<li><span data-item-drag="image"><i class="text-icon dashicons dashicons-format-image"></i><?php esc_html_e("Image", 'wppb'); ?></span></li>
+							<li><span data-item-drag="lead-form"><i class="text-icon dashicons dashicons-feedback"></i><?php esc_html_e("Form", 'wppb'); ?></span></li>
+							<li><span class="wppb-drag-itemes" data-item-drag="spacer"><i class="text-icon dashicons dashicons-image-flip-vertical"></i><?php esc_html_e("Spacer", 'wppb'); ?></span>
 							</li>
 							<li>
-								<span class="wppb-drag-itemes form" data-item-drag="shortcode"><i class="text-icon dashicons dashicons-shortcode"></i><?php _e("Short Code", 'wppb'); ?></span>
+								<span class="wppb-drag-itemes form" data-item-drag="shortcode"><i class="text-icon dashicons dashicons-shortcode"></i><?php esc_html_e("Short Code", 'wppb'); ?></span>
 							</li>
-							<li><span class="lock"><i class="text-icon dashicons dashicons-text"></i><?php _e('Icon List', 'wppb'); ?></span></li>
-							<li><span class="lock"><i class="text-icon dashicons dashicons-star-empty"></i><?php _e('Icon', 'wppb'); ?></span></li>
-							<li><span class="lock"><i class="text-icon dashicons dashicons-image-filter"></i><?php _e('Lottie', 'wppb'); ?></span></li>
-							<li><span class="lock"><i class="text-icon dashicons dashicons-text"></i><?php _e("Section", 'wppb'); ?></span></li>
-							<li><span class="lock form"><i class="text-icon dashicons dashicons-feedback"></i><?php _e("Contact Form 7", 'wppb'); ?></span></li>
-							<li><span class="lock form"><i class="text-icon dashicons dashicons-email"></i><?php _e("Mail Chimp", 'wppb'); ?></span></li>
-							<li><span class="lock"><i class="text-icon dashicons dashicons-format-video"></i><?php _e("Video", 'wppb'); ?></span></li>
+							<li><span class="lock"><i class="text-icon dashicons dashicons-text"></i><?php esc_html_e('Icon List', 'wppb'); ?></span></li>
+							<li><span class="lock"><i class="text-icon dashicons dashicons-star-empty"></i><?php esc_html_e('Icon', 'wppb'); ?></span></li>
+							<li><span class="lock"><i class="text-icon dashicons dashicons-image-filter"></i><?php esc_html_e('Lottie', 'wppb'); ?></span></li>
+							<li><span class="lock"><i class="text-icon dashicons dashicons-text"></i><?php esc_html_e("Section", 'wppb'); ?></span></li>
+							<li><span class="lock form"><i class="text-icon dashicons dashicons-feedback"></i><?php esc_html_e("Contact Form 7", 'wppb'); ?></span></li>
+							<li><span class="lock form"><i class="text-icon dashicons dashicons-email"></i><?php esc_html_e("Mail Chimp", 'wppb'); ?></span></li>
+							<li><span class="lock"><i class="text-icon dashicons dashicons-format-video"></i><?php esc_html_e("Video", 'wppb'); ?></span></li>
 
 						</ul>
 					</div>
 				</section>
 				<!-- global setting -->
 				<div data-toggle="global-setting" class="rl_i_editor-element-Toggle outer-toggle">
-					<span><?php _e("Global Setting", 'wppb'); ?></span>
+					<span><?php esc_html_e("Global Setting", 'wppb'); ?></span>
 					<span class="bottomCarret dashicons dashicons-arrow-right"></span>
 				</div>
 				<section data-toggle-action="global-setting" class="rl_i_editor-global-setting rl_i_editor-element-item rl-display-none">
@@ -73,7 +73,7 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 								</div>
 							</div>
 							<div class="background-image-setting">
-								<span class="rl-sub-title"><?php _e("Background Position", 'wppb') ?></span>
+								<span class="rl-sub-title"><?php esc_html_e("Background Position", 'wppb') ?></span>
 								<div class="background-image-setting-position">
 									<div>
 										<input id="image-setting-left-top1" type="radio" name="background-position" data-global-input='background-position' value="left top">
@@ -113,7 +113,7 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 									</div>
 								</div>
 								<div class="rl_i_editor-item-content-items inline__">
-									<label class="rl-sub-title"><?php _e('Background Size', 'wppb') ?></label>
+									<label class="rl-sub-title"><?php esc_html_e('Background Size', 'wppb') ?></label>
 									<div>
 										<?php $wp_builder_obj->select("data-global-input='background-size'", [[__('Auto', 'wppb'), 'auto'], [__('Contain', 'wppb'), 'contain'], [__('Cover', 'wppb'), 'cover']]); ?>
 									</div>
@@ -133,10 +133,10 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 						<?php $wp_builder_obj->range_slider(__('Height(px)', 'wppb'), 'main-wrapper-height', ['title' => 'px', 'min' => 150, 'max' => 1000, 'value' => 200], 'wrapper-height'); ?>
 					</section>
 					<div class="rl_i_editor-item-content-items rl-two-column-width">
-						<label class="rl-sub-title"><?php _e('Column Width', 'wppb'); ?></label>
+						<label class="rl-sub-title"><?php esc_html_e('Column Width', 'wppb'); ?></label>
 						<div>
-							<label class="rl-sub-title"><?php _e('Column One %', 'wppb'); ?></label>
-							<label class="rl-sub-title"><?php _e('Column Two %', 'wppb'); ?></label>
+							<label class="rl-sub-title"><?php esc_html_e('Column One %', 'wppb'); ?></label>
+							<label class="rl-sub-title"><?php esc_html_e('Column Two %', 'wppb'); ?></label>
 						</div>
 						<div>
 							<input type="number" data-global-input="column-width" data-column="1">
@@ -151,7 +151,7 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 				</section>
 				<!-- Close button setting -->
 				<div data-toggle="close-btn-setting" class="rl_i_editor-element-Toggle outer-toggle">
-					<span><?php _e('Close Button Setting', 'wppb'); ?></span>
+					<span><?php esc_html_e('Close Button Setting', 'wppb'); ?></span>
 					<span class="bottomCarret dashicons dashicons-arrow-right"></span>
 				</div>
 				<section data-toggle-action="close-btn-setting" class="rl-display-none">
@@ -163,15 +163,15 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 					<div class="close-btn-container">
 						<div class="rl_i_editor-item-content-header">
 							<nav class="rl-clear">
-								<span data-editor-tab="close-btn-style" class="active_"><?php _e('Style', 'wppb'); ?></span>
-								<span data-editor-tab="close-btn-alignment"><?php _e('Alignment', 'wppb'); ?></span>
+								<span data-editor-tab="close-btn-style" class="active_"><?php esc_html_e('Style', 'wppb'); ?></span>
+								<span data-editor-tab="close-btn-alignment"><?php esc_html_e('Alignment', 'wppb'); ?></span>
 							</nav>
 						</div>
 
 						<div class="rl_i_editor-item-content-i rl_i_editor-item-content-close-btn-alignment ">
 							<div class="rl_i_editor-item-content-items title_ inline_">
 								<div class="rl_i_range-font-size">
-									<label class="rl-sub-title"><?php _e('Button Margin', 'wppb'); ?></label>
+									<label class="rl-sub-title"><?php esc_html_e('Button Margin', 'wppb'); ?></label>
 								</div>
 							</div>
 							<?php
@@ -199,8 +199,8 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 					<div class="rl_i_editor-item-content-tab">
 						<div class="rl_i_editor-item-content-header">
 							<nav class="rl-clear">
-								<span data-editor-tab="content" class="active_"><?php _e('Content', 'wppb'); ?></span>
-								<span data-editor-tab="style"><?php _e('Style', 'wppb'); ?></span>
+								<span data-editor-tab="content" class="active_"><?php esc_html_e('Content', 'wppb'); ?></span>
+								<span data-editor-tab="style"><?php esc_html_e('Style', 'wppb'); ?></span>
 							</nav>
 						</div>
 						<!-- content -->
@@ -213,7 +213,7 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 								</div>
 								<!-- image -->
 								<div class="rl_i_editor-item-content-items item-image image_">
-									<label class="rl-sub-title"><?php _e('Choose Image', 'wppb'); ?></label>
+									<label class="rl-sub-title"><?php esc_html_e('Choose Image', 'wppb'); ?></label>
 									<div class="rl-i-choose-image">
 										<div data-editor-input='img' class="rl-i-choose-image-wrap" style="background-image: url(<?php echo esc_url(WPPB_URL . 'img/blank-img.png', 'wppb'); ?>);">
 											<div class="rl-i-choose-image-inside-wrap"><span class="iconPlus dashicons dashicons-plus"></span></div>
@@ -222,7 +222,7 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 								</div>
 								<!-- title -->
 								<div class="rl_i_editor-item-content-items item-text item-title_ block__">
-									<label class="rl_i_editor-title rl-sub-title"><?php _e('Title', 'wppb'); ?></label>
+									<label class="rl_i_editor-title rl-sub-title"><?php esc_html_e('Title', 'wppb'); ?></label>
 									<textarea data-editor-input='title'></textarea>
 								</div>
 								<?php
@@ -233,7 +233,7 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 								$wp_builder_obj->range_slider(__("Letter Spacing(px)", 'wppb'), 'letter-spacing', ['title' => 'px', 'min' => '-5', 'value' => 1, 'max' => 50, "container-class" => 'item-text'], false, 'data-editor-input');
 								$wp_builder_obj->range_slider(__('Line Height(px)', 'wppb'), 'line-height', ['title' => 'px', 'min' => '-5', 'value' => 1, 'max' => 100, "container-class" => 'item-text'], false, 'data-editor-input'); ?>
 								<div class="rl_i_editor-item-content-items item-text item-link_ block__">
-									<label class="rl_i_editor-title rl-sub-title"><?php _e('Link', 'wppb'); ?></label>
+									<label class="rl_i_editor-title rl-sub-title"><?php esc_html_e('Link', 'wppb'); ?></label>
 									<div class="rl_i_editor-anchor">
 										<div class="rl_i_editor-anchor-input">
 											<input type="text" data-editor-input='link'>
@@ -260,7 +260,7 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 							?>
 							<!-- font weight -->
 							<div class="rl_i_editor-item-content-items item-text inline__">
-								<label class="rl-sub-title"><?php _e('Font Weight', 'wppb'); ?></label>
+								<label class="rl-sub-title"><?php esc_html_e('Font Weight', 'wppb'); ?></label>
 								<div>
 									<?php $wp_builder_obj->select('data-editor-input="font-weight"', [[200, 200], [300, 300], [400, 400], [500, 500], [600, 600], [700, 700], [800, 800], [900, 900]]); ?>
 
@@ -279,7 +279,7 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 				<!-- delete Setting -->
 				<?php if (isset($wppb_popup_id)) { ?>
 					<div data-toggle="popup-delete-opt" class="rl_i_editor-element-Toggle outer-toggle">
-						<span><?php _e('Delete Popup', 'wppb'); ?></span>
+						<span><?php esc_html_e('Delete Popup', 'wppb'); ?></span>
 						<span class="bottomCarret dashicons dashicons-arrow-right"></span>
 					</div>
 					<section data-toggle-action="popup-delete-opt" class="rl-popup-delete-opt rl-display-none">
@@ -298,25 +298,25 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 				<!-- add lead form -->
 				<section class="rl-display-none rl-lead-form-panel">
 					<div class="rl_i_editor-element-Toggle">
-						<span><?php _e('Lead Form', 'wppb'); ?></span>
+						<span><?php esc_html_e('Lead Form', 'wppb'); ?></span>
 					</div>
 
 					<div class="rl_i_editor-item-content-items title_ inline__">
-						<label class="rl-sub-title"><?php _e('Choose Lead Form', 'wppb'); ?></label>
+						<label class="rl-sub-title"><?php esc_html_e('Choose Lead Form', 'wppb'); ?></label>
 					</div>
 					<?php if ($LfbPluginPath) echo wp_kses_post($LfbPluginPath); ?>
 
 					<div class="rl_i_editor-item-content-items lead-form-bulider-select <?php if ($LfbPluginPath) echo 'rl-display-none'; ?>">
 						<select>
-							<option><?php _e('Select Form', 'wppb'); ?></option>
+							<option><?php esc_html_e('Select Form', 'wppb'); ?></option>
 							<?php echo wp_kses(wppb_db::lead_form_opt(),array( 'option' => array('value'=> true))); ?>
 						</select>
 					</div>
 					<div class="wppb-lead-form-styling">
 						<div class="rl_i_editor-item-content-header">
 							<nav class="rl-clear">
-								<span data-editor-tab="form-style" class="active_"><?php _e('Form', 'wppb'); ?></span>
-								<span data-editor-tab="form-content"><?php _e('Form Content', 'wppb'); ?></span>
+								<span data-editor-tab="form-style" class="active_"><?php esc_html_e('Form', 'wppb'); ?></span>
+								<span data-editor-tab="form-content"><?php esc_html_e('Form Content', 'wppb'); ?></span>
 							</nav>
 						</div>
 						<!-- form-style -->
@@ -382,7 +382,7 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 							$wp_builder_obj->alignment(__('Button Alignment', 'wppb'), 'lf-submit-aliment', 'data-lead-form');
 							?>
 							<div class="rl_i_editor-item-content-items item-text inline__">
-								<label class="rl-sub-title"><?php _e('Font Weight', 'wppb'); ?></label>
+								<label class="rl-sub-title"><?php esc_html_e('Font Weight', 'wppb'); ?></label>
 								<div>
 							<?php $wp_builder_obj->select('data-lead-form="submit-font-weight"', [[200, 200], [300, 300], [400, 400], [500, 500], [600, 600], [700, 700], [800, 800], [900, 900]]); ?>
 								</div>
@@ -398,10 +398,10 @@ if (file_exists(WP_PLUGIN_DIR . '/lead-form-builder/lead-form-builder.php') && i
 				<!-- shortcode init  -->
 				<section class="rl-display-none rl-shortcode-panel wppb-sections-extra">
 					<div class="rl_i_editor-element-Toggle">
-						<span><?php _e('Shortcode Configuration', 'wppb'); ?></span>
+						<span><?php esc_html_e('Shortcode Configuration', 'wppb'); ?></span>
 					</div>
 					<div class="rl_i_editor-item-content-items title_ inline__">
-						<label class="rl-sub-title"><?php _e('Paste Your Shortcode', 'wppb'); ?></label>
+						<label class="rl-sub-title"><?php esc_html_e('Paste Your Shortcode', 'wppb'); ?></label>
 					</div>
 					<div class="rl-mail-chip-api">
 						<textarea name="shortcode-panel-api" data-shortcode='shortcode-code-get-code'></textarea>

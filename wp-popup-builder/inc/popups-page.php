@@ -8,11 +8,11 @@ $custom_popup_all = wppb_db::getCustomPopup();
 	<div class="reserConfirm_inner">
 		<div class="resetWrapper">
 			<div class="resetHeader">
-				<span><?php _e('Popup Will Delete Permanentally.', 'wppb'); ?></span>
+				<span><?php esc_html_e('Popup Will Delete Permanentally.', 'wppb'); ?></span>
 			</div>
 			<div class="resetFooter">
-				<a class="wppbPopup popup deny" href="#"><span class="dashicons dashicons-dismiss"></span><?php _e('No', 'wppb') ?></a>
-				<a class="wppbPopup popup confirm" href="#"><span class="dashicons dashicons-yes-alt"></span><?php _e('Yes', 'wppb') ?></a>
+				<a class="wppbPopup popup deny" href="#"><span class="dashicons dashicons-dismiss"></span><?php esc_html_e('No', 'wppb') ?></a>
+				<a class="wppbPopup popup confirm" href="#"><span class="dashicons dashicons-yes-alt"></span><?php esc_html_e('Yes', 'wppb') ?></a>
 			</div>
 		</div>
 	</div>
@@ -26,11 +26,11 @@ $custom_popup_all = wppb_db::getCustomPopup();
 
 			<div class="wppb-popup-cmn-nav-item">
 
-				<a class="active" data-tab='view-list' data-tab-group='pro-to-free' href="#"> <?php _e('View Popup List', 'wppb'); ?></a>
+				<a class="active" data-tab='view-list' data-tab-group='pro-to-free' href="#"> <?php esc_html_e('View Popup List', 'wppb'); ?></a>
 
-				<a data-tab='view-free-to-pro' data-tab-group='pro-to-free' href="#"> <?php _e('Free To Pro', 'wppb'); ?></a>
+				<a data-tab='view-free-to-pro' data-tab-group='pro-to-free' href="#"> <?php esc_html_e('Free To Pro', 'wppb'); ?></a>
 
-				<a data-tab='help' data-tab-group='pro-to-free' href="#"><?php _e('Help', 'wppb'); ?></a>
+				<a data-tab='help' data-tab-group='pro-to-free' href="#"><?php esc_html_e('Help', 'wppb'); ?></a>
 
 			</div>
 			
@@ -40,9 +40,9 @@ $custom_popup_all = wppb_db::getCustomPopup();
 
 			<div class="wppb-custom-popup-heading">
 
-				<h1><?php _e('WP Builder Popup', 'wppb'); ?></h1>
+				<h1><?php esc_html_e('WP Builder Popup', 'wppb'); ?></h1>
 
-				<a href="<?php echo esc_url(WPPB_PAGE_URL . '&custom-popup&_pnonce='.esc_attr(wp_create_nonce( 'nonce_pop' )), 'wppb'); ?>"> <span class="dashicons dashicons-edit"></span> <?php _e('Add New Popup', 'wppb'); ?></a>
+				<a href="<?php echo esc_url(WPPB_PAGE_URL . '&custom-popup&_pnonce='.esc_attr(wp_create_nonce( 'nonce_pop' )), 'wppb'); ?>"> <span class="dashicons dashicons-edit"></span> <?php esc_html_e('Add New Popup', 'wppb'); ?></a>
 
 			</div>
 
@@ -50,18 +50,18 @@ $custom_popup_all = wppb_db::getCustomPopup();
 
 				<div class="wppb-custom-popup-head rl-clear">
 
-					<div class="wppb-popup-list-title"><span><?php _e('Title','wppb');?></span></div>
+					<div class="wppb-popup-list-title"><span><?php esc_html_e('Title','wppb');?></span></div>
 
-					<div class="wppb-popup-list-enable"><span><?php _e('Status','wppb');?></span></div>
+					<div class="wppb-popup-list-enable"><span><?php esc_html_e('Status','wppb');?></span></div>
 
-					<div class="wppb-popup-list-mobile"><span><?php _e('Device','wppb');?></span></div>
+					<div class="wppb-popup-list-mobile"><span><?php esc_html_e('Device','wppb');?></span></div>
 
 					<div class="wppb-popup-list-view"><span>
-					<?php _e('View','wppb');?></span></div>
+					<?php esc_html_e('View','wppb');?></span></div>
 
-					<div class="wppb-popup-list-action"><span><?php _e('Action','wppb');?></span></div>
+					<div class="wppb-popup-list-action"><span><?php esc_html_e('Action','wppb');?></span></div>
 
-					<div class="wppb-popup-list-setting"><span><?php _e('Setting','wppb');?></span></div>
+					<div class="wppb-popup-list-setting"><span><?php esc_html_e('Setting','wppb');?></span></div>
 
 				</div>
 
@@ -71,13 +71,13 @@ $custom_popup_all = wppb_db::getCustomPopup();
 
 				foreach ($custom_popup_all as $popupValue) {
 
-					$allSetting = unserialize($popupValue->setting);
+					$allSetting = unserialize($popupValue->setting, ['allowed_classes' => false]);
 
 					$business_id 	   		= isset($popupValue->BID) ? $popupValue->BID : "";
 
 					if ($popupValue->boption != '') {
 
-						$bOption = unserialize($popupValue->boption);
+						$bOption = unserialize($popupValue->boption, ['allowed_classes' => false]);
 					}
 					
 					$device = isset($bOption['device']) ? $bOption['device'] : false;
@@ -93,7 +93,7 @@ $custom_popup_all = wppb_db::getCustomPopup();
 
 				<p class="no-popup-found">
 
-					<?php _e('No Popup Found. Click Add New Popup To Create Popup.','wppb');?> 
+					<?php esc_html_e('No Popup Found. Click Add New Popup To Create Popup.','wppb');?> 
 
 				</p>;
 

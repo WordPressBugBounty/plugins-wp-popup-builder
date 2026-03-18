@@ -25,17 +25,17 @@ define('WPPB_ADIMG_URL', WPPB_URL . 'img/paid/');
 	<div class="wp-popup-name-layout-name-init-2">
 		<div class="rl_i_editor-item-content-header">
 			<nav class="rl-clear">
-				<span data-tab='prebuilt' data-tab-group="prebuilt-layout" class="active"><?php _e('Prebuilt Popup', 'wppb'); ?></span>
-				<span data-tab='choose-layout' data-tab-group="prebuilt-layout"><?php _e('Choose Layout', 'wppb'); ?></span>
+				<span data-tab='prebuilt' data-tab-group="prebuilt-layout" class="active"><?php esc_html_e('Prebuilt Popup', 'wppb'); ?></span>
+				<span data-tab='choose-layout' data-tab-group="prebuilt-layout"><?php esc_html_e('Choose Layout', 'wppb'); ?></span>
 			</nav>
 		</div>
-		<button class="wppb-popup-name-init business_disabled"><?php _e('NEXT', 'wppb'); ?></button>
+		<button class="wppb-popup-name-init business_disabled"><?php esc_html_e('NEXT', 'wppb'); ?></button>
 	</div>
 
 	<!-- popup name  -->
 	<div class="wppb-popup-name">
 		<div>
-			<span><?php _e('Enter Popup Name', 'wppb'); ?></span>
+			<span><?php esc_html_e('Enter Popup Name', 'wppb'); ?></span>
 			<input type="text" name="wppb-popup-name">
 		</div>
 	</div>
@@ -55,12 +55,12 @@ define('WPPB_ADIMG_URL', WPPB_URL . 'img/paid/');
 							<div data-rl-column='1' class="wppb-popup-rl-column rlEditorDropable">
 								<div class="data-rl-editable-wrap">
 									<div class="actions_"><span class="dashicons dashicons-no rlRemoveElement"></span></div>
-									<span class="text-heading" data-rl-editable="heading" data-content-alignment="center" style="font-size: 26px; line-height: 30px;"><?php _e('Add Your Business Heading', 'wppb'); ?></span>
+									<span class="text-heading" data-rl-editable="heading" data-content-alignment="center" style="font-size: 26px; line-height: 30px;"><?php esc_html_e('Add Your Business Heading', 'wppb'); ?></span>
 								</div>
 								<div class="data-rl-editable-wrap">
 									<div class="actions_">
 										<span class="dashicons dashicons-no rlRemoveElement"></span></div>
-									<span data-rl-editable="text" style="font-size: 16px;margin: -4px 0px 15px;color: #d6d6d6;"><?php _e('Add your business sub heading', 'wppb'); ?></span>
+									<span data-rl-editable="text" style="font-size: 16px;margin: -4px 0px 15px;color: #d6d6d6;"><?php esc_html_e('Add your business sub heading', 'wppb'); ?></span>
 								</div>
 								<div class="data-rl-editable-wrap wrap-image_" style="justify-content: center;">
 									<div class="actions_">
@@ -71,12 +71,12 @@ define('WPPB_ADIMG_URL', WPPB_URL . 'img/paid/');
 								<div class="data-rl-editable-wrap">
 									<div class="actions_">
 										<span class="dashicons dashicons-no rlRemoveElement"></span></div>
-									<span data-rl-editable="text" style="font-size: 12px;color:#ACACAC;letter-spacing: 0;margin: 0;padding: 12px 0;"><?php _e('Small Business: Pop-Up Shop Ticket, Sat, Apr 25 2020', 'wppb'); ?></span>
+									<span data-rl-editable="text" style="font-size: 12px;color:#ACACAC;letter-spacing: 0;margin: 0;padding: 12px 0;"><?php esc_html_e('Small Business: Pop-Up Shop Ticket, Sat, Apr 25 2020', 'wppb'); ?></span>
 								</div>
 
 								<div class="data-rl-editable-wrap" style="justify-content: center;">
 									<div class="actions_"><span class="dashicons dashicons-no rlRemoveElement"></span></div>
-									<span data-rl-editable="link" data-content-alignment="center" data-editor-link="#" style="width: fit-content; padding: 8px 16px; border: 1px solid rgba(211, 74, 74, 0.35); color: rgba(226, 178, 32, 1);font-size: 15px; border-radius:2px;"><?php _e('Book Ticket', 'wppb'); ?></span>
+									<span data-rl-editable="link" data-content-alignment="center" data-editor-link="#" style="width: fit-content; padding: 8px 16px; border: 1px solid rgba(211, 74, 74, 0.35); color: rgba(226, 178, 32, 1);font-size: 15px; border-radius:2px;"><?php esc_html_e('Book Ticket', 'wppb'); ?></span>
 								</div>
 							</div>
 						</div>
@@ -102,10 +102,10 @@ define('WPPB_ADIMG_URL', WPPB_URL . 'img/paid/');
 							<div data-rl-column='1' class="wppb-popup-rl-column rlEditorDropable">
 								<div class="data-rl-editable-wrap">
 									<div class="actions_"><span class="dashicons dashicons-no rlRemoveElement"></span></div>
-									<span class="text-heading" data-rl-editable="heading" data-content-alignment="center" style="letter-spacing: 0; line-height: 40px; font-size: 35px; font-weight: 500; padding-right: 0px; padding-bottom: 1px; color: rgba(82, 82, 82, 1);"><?php _e('Do you want 25% off  your first order ?', 'wppb'); ?></span>
+									<span class="text-heading" data-rl-editable="heading" data-content-alignment="center" style="letter-spacing: 0; line-height: 40px; font-size: 35px; font-weight: 500; padding-right: 0px; padding-bottom: 1px; color: rgba(82, 82, 82, 1);"><?php esc_html_e('Do you want 25% off  your first order ?', 'wppb'); ?></span>
 								</div>
 								<div class="data-rl-editable-wrap" style="justify-content: center;">
-									<div class="actions_"><span class="dashicons dashicons-no rlRemoveElement"></span></div><span data-rl-editable="link" data-editor-link="#" data-editor-link-target="0" style="width: 75%;padding: 8px 6px;border: 2px solid rgba(10, 198, 206, 1);letter-spacing: 0;font-weight: 500;font-size: 15px;line-height:15px;border-radius: 12px;color: rgba(10, 198, 206, 1);margin: 12px 0px 3px 0px;" data-content-alignment="center" class=""><?php _e('GET EXCLUSIVE CODE', 'wppb'); ?></span>
+									<div class="actions_"><span class="dashicons dashicons-no rlRemoveElement"></span></div><span data-rl-editable="link" data-editor-link="#" data-editor-link-target="0" style="width: 75%;padding: 8px 6px;border: 2px solid rgba(10, 198, 206, 1);letter-spacing: 0;font-weight: 500;font-size: 15px;line-height:15px;border-radius: 12px;color: rgba(10, 198, 206, 1);margin: 12px 0px 3px 0px;" data-content-alignment="center" class=""><?php esc_html_e('GET EXCLUSIVE CODE', 'wppb'); ?></span>
 								</div>
 							</div>
 						</div>
@@ -123,10 +123,10 @@ define('WPPB_ADIMG_URL', WPPB_URL . 'img/paid/');
 							<div data-rl-column='1' class="wppb-popup-rl-column rlEditorDropable">
 								<div class="data-rl-editable-wrap">
 									<div class="actions_"><span class="dashicons dashicons-no rlRemoveElement"></span></div>
-									<span class="text-heading" data-rl-editable="heading" data-content-alignment="center" style="letter-spacing: 0; line-height: 40px; font-size: 35px; font-weight: 500; padding-right: 0px; padding-bottom: 1px; color: rgba(82, 82, 82, 1);"><?php _e('Do you want 25% off  your first order ?', 'wppb'); ?></span>
+									<span class="text-heading" data-rl-editable="heading" data-content-alignment="center" style="letter-spacing: 0; line-height: 40px; font-size: 35px; font-weight: 500; padding-right: 0px; padding-bottom: 1px; color: rgba(82, 82, 82, 1);"><?php esc_html_e('Do you want 25% off  your first order ?', 'wppb'); ?></span>
 								</div>
 								<div class="data-rl-editable-wrap" style="justify-content: center;">
-									<div class="actions_"><span class="dashicons dashicons-no rlRemoveElement"></span></div><span data-rl-editable="link" data-editor-link="#" data-editor-link-target="0" style="width: 75%;padding: 8px 6px;border: 2px solid rgba(10, 198, 206, 1);letter-spacing: 0;font-weight: 500;font-size: 15px;line-height:15px;border-radius: 12px;color: rgba(10, 198, 206, 1);margin: 12px 0px 3px 0px;" data-content-alignment="center" class=""><?php _e('GET EXCLUSIVE CODE', 'wppb'); ?></span>
+									<div class="actions_"><span class="dashicons dashicons-no rlRemoveElement"></span></div><span data-rl-editable="link" data-editor-link="#" data-editor-link-target="0" style="width: 75%;padding: 8px 6px;border: 2px solid rgba(10, 198, 206, 1);letter-spacing: 0;font-weight: 500;font-size: 15px;line-height:15px;border-radius: 12px;color: rgba(10, 198, 206, 1);margin: 12px 0px 3px 0px;" data-content-alignment="center" class=""><?php esc_html_e('GET EXCLUSIVE CODE', 'wppb'); ?></span>
 								</div>
 							</div>
 							<div data-rl-column='1' class="wppb-popup-rl-column rlEditorDropable">
@@ -204,8 +204,8 @@ define('WPPB_ADIMG_URL', WPPB_URL . 'img/paid/');
 
 		<div class="rl_i_editor-item-content-header prebuilt-free-paid">
 			<nav class="rl-clear">
-				<span data-tab='free' data-tab-group="free-paid" class="active"><?php _e('Free Popup', 'wppb'); ?></span>
-				<span data-tab='paid' data-tab-group="free-paid"><?php _e('Premium Popup', 'wppb'); ?></span>
+				<span data-tab='free' data-tab-group="free-paid" class="active"><?php esc_html_e('Free Popup', 'wppb'); ?></span>
+				<span data-tab='paid' data-tab-group="free-paid"><?php esc_html_e('Premium Popup', 'wppb'); ?></span>
 			</nav>
 		</div>
 		<div data-tab-active='free' data-tab-group="free-paid" class="prebuilt-free active">
@@ -356,7 +356,7 @@ define('WPPB_ADIMG_URL', WPPB_URL . 'img/paid/');
 	<!-- prebuilt json file  -->
 
 	<div class="wp-popup-name-layout-name-init">
-		<button class="wppb-popup-name-init business_disabled"><?php _e('NEXT', 'wppb'); ?>
+		<button class="wppb-popup-name-init business_disabled"><?php esc_html_e('NEXT', 'wppb'); ?>
 		</button>
 	</div>
 

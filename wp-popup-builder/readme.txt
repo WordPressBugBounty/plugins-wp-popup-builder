@@ -3,8 +3,8 @@ Contributors: ThemeHunk
 Author URI: : https://www.themehunk.com/
 Tags: popup,wp popup, popup maker, popup builder, popups,marketing
 Requires at least: 5.5
-Tested up to: 6.6
-Stable tag: 1.3.6
+Tested up to: 6.9
+Stable tag: 1.3.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -129,6 +129,15 @@ Just upload the `wp-popup-builder.zip` to the `/wp-content/plugins/` directory, 
 
 
 == Changelog ==
+
+= 1.3.8 =
+* Update: Tested with WordPress 6.9.
+* Update: PHP 8.1 compatibility — fixed deprecated null passed to setcookie(), implicit int version in wp_enqueue_script/style, and added allowed_classes to all unserialize() calls.
+* Fix: Lead form double-submission — submit button was re-enabled synchronously before AJAX completed, allowing multiple submits; button state is now managed inside success/fail callbacks only.
+* Update: Added Requires PHP: 5.6 to plugin header.
+
+= 1.3.7 =
+* Update: Tested with WordPress 6.8.
 
 = 1.3.6 =
 * Fix : In ajax manage_option permission added.
@@ -284,6 +293,9 @@ Initial release
 
 
 == Upgrade Notice ==
+
+= 1.3.8 =
+Security and compatibility update. Fixes CSRF on notice dismiss, AJAX permission checks, SQL injection risk, PHP 8.1 notices, text domain issues, and a bug where the lead form success message appeared before form submission.
 
 = 1.3.6 =
 * Fix : In ajax manage_option permission added.

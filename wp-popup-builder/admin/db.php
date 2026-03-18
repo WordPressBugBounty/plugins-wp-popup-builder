@@ -102,7 +102,7 @@ class wppb_db
       } else if ($preview) {
         return  self::$db->get_row(self::$db->prepare("SELECT addon_name,setting FROM " . self::$table . " WHERE BID=%d ",$bid));
       } else {
-        return  self::$db->get_row(self::$db->prepare("SELECT addon_name,setting FROM " . self::$table . " WHERE BID='" . $bid . "' AND is_active=%d",1));
+        return  self::$db->get_row(self::$db->prepare("SELECT addon_name,setting FROM " . self::$table . " WHERE BID=%d AND is_active=%d", $bid, 1));
       }
     }
   }
@@ -150,7 +150,7 @@ class wppb_db
   // popup html creating
   public function wppb_html($setting, $inline = '', $setting_ = false)
   {
-    if ($setting && @unserialize($setting)) {
+    if ($setting && @unserialize($setting, ['allowed_classes' => false])) {
       $popupSetData = array(
         'wrapper-style' => 'width:550px;',
         'wrapper-height' => 'auto',
@@ -170,7 +170,7 @@ class wppb_db
       $popupFrontSetting = ['layout' => '', 'close-type' => 3, 'outside-color' => '#535353F2', 'effect' => 1];
       if (is_array($setting_)) $popupFrontSetting = array_merge($popupFrontSetting, $setting_);
 
-      $allSetting = unserialize($setting);
+      $allSetting = unserialize($setting, ['allowed_classes' => false]);
       foreach ($allSetting as $setting_value) {
         if (isset($setting_value['content']) && is_array($setting_value['content'])) {
 
