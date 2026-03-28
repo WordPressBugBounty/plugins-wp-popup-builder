@@ -5,7 +5,9 @@ class wppb_load
 	private function __construct()
 	{
 		if (isset($_GET['wppb_preview'])) {
-			add_action('wp_footer', array($this, 'preview_footer'));
+			if ( is_user_logged_in() && current_user_can( 'edit_posts' ) ) {
+				add_action('wp_footer', array($this, 'preview_footer'));
+			}
 		} else {
 			add_action('wp_footer', array($this, 'footer_load'));
 		}

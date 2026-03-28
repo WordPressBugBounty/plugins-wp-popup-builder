@@ -4,7 +4,7 @@ Author URI: : https://www.themehunk.com/
 Tags: popup,wp popup, popup maker, popup builder, popups,marketing
 Requires at least: 5.5
 Tested up to: 6.9
-Stable tag: 1.3.8
+Stable tag: 1.3.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -129,6 +129,9 @@ Just upload the `wp-popup-builder.zip` to the `/wp-content/plugins/` directory, 
 
 
 == Changelog ==
+
+= 1.3.9 =
+* Security Fix: Sensitive Data Exposure — preventing unauthenticated enumeration and exposure of popup content.
 
 = 1.3.8 =
 * Update: Tested with WordPress 6.9.
@@ -293,6 +296,9 @@ Initial release
 
 
 == Upgrade Notice ==
+
+= 1.3.9 =
+Security fix. Resolves sensitive data exposure vulnerability in the popup preview endpoint reported by Bao - BlueRock. Update immediately.
 
 = 1.3.8 =
 Security and compatibility update. Fixes CSRF on notice dismiss, AJAX permission checks, SQL injection risk, PHP 8.1 notices, text domain issues, and a bug where the lead form success message appeared before form submission.
